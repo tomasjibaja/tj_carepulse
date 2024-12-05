@@ -35,14 +35,14 @@ const AppointmentModal = ({
           variant='ghost'
           className={`capitalize ${type === 'schedule' && 'text-green-500'}`}
         >
-          {type}
+          {type === 'schedule' ? 'agendar' : 'cancelar'}
         </Button>
       </DialogTrigger>
       <DialogContent className='shad-dialog sm:max-w-md'>
         <DialogHeader className='mb-4 space-y-3'>
-          <DialogTitle className='capitalize'>{type} Appointment</DialogTitle>
+          <DialogTitle className='capitalize'>{type === 'schedule' ? 'agendar' : 'cancelar'} Turno</DialogTitle>
           <DialogDescription>
-            Please fill in the following details to {type} your appointment
+            Por favor ingresa los detalles para {type === 'schedule' ? 'agendar' : 'cancelar'} el turno
           </DialogDescription>
         </DialogHeader>
 

@@ -42,40 +42,40 @@ export const IdentificationTypes = [
 
 export const Doctors = [
   {
-    image: "/assets/images/dr-green.png",
-    name: "John Green",
+    image: "/assets/images/kat-von-d.png",
+    name: "Kat Von-D",
   },
   {
-    image: "/assets/images/dr-cameron.png",
-    name: "Leila Cameron",
+    image: "/assets/images/don-ed-hardy.png",
+    name: "Don Ed Hardy",
   },
   {
-    image: "/assets/images/dr-livingston.png",
-    name: "David Livingston",
+    image: "/assets/images/dr-woo.png",
+    name: "Dr Woo",
   },
   {
-    image: "/assets/images/dr-peter.png",
-    name: "Evan Peter",
+    image: "/assets/images/paul-booth.png",
+    name: "Paul Booth",
   },
   {
-    image: "/assets/images/dr-powell.png",
-    name: "Jane Powell",
+    image: "/assets/images/scott-campbell.png",
+    name: "Scott Campbell",
   },
   {
-    image: "/assets/images/dr-remirez.png",
-    name: "Alex Ramirez",
+    image: "/assets/images/wes-lang.png",
+    name: "Wes Lang",
   },
   {
-    image: "/assets/images/dr-lee.png",
-    name: "Jasmine Lee",
+    image: "/assets/images/zina-samoletova.png",
+    name: "Zina Samoletova",
   },
   {
-    image: "/assets/images/dr-cruz.png",
-    name: "Alyana Cruz",
+    image: "/assets/images/ryan-ashley-malarkey.png",
+    name: "Ryan Ashley Malarkey",
   },
   {
-    image: "/assets/images/dr-sharma.png",
-    name: "Hardik Sharma",
+    image: "/assets/images/keith-mccurdy.png",
+    name: "Keith McCurdy",
   },
 ];
 

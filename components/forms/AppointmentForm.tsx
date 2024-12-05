@@ -45,9 +45,9 @@ const AppointmentForm = ({
     },
   })
 
-  console.log({
-    userId, type, appointment
-  })
+  // console.log({
+  //   userId, type, appointment
+  // })
  
   async function onSubmit( values: z.infer<typeof AppointmentFormValidation>) {
 
@@ -113,13 +113,13 @@ const AppointmentForm = ({
 
   switch (type) {
     case 'cancel':
-      buttonLabel = 'Cancel appointment'
+      buttonLabel = 'Cancelar turno'
       break;
     case 'create':
-      buttonLabel = 'Create appointment'
+      buttonLabel = 'Crear turno'
       break;
     case 'schedule':
-      buttonLabel = 'Schedule appointment'
+      buttonLabel = 'Agendar turno'
       break;
     default:
       break;
@@ -129,8 +129,8 @@ const AppointmentForm = ({
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1">
         {type === 'create' && <section className="mb-12 space-y-4">
-          <h1 className="header">New appointment</h1>
-          <p className="text-dark-700">Request a new appointment in ten seconds</p>
+          <h1 className="header">Nuevo turno</h1>
+          <p className="text-dark-700">Solicita un turno en diez segundos</p>
         </section>}
 
         {type !== 'cancel' && (
@@ -139,8 +139,8 @@ const AppointmentForm = ({
               fieldType={FormFieldType.SELECT}
               control={form.control}
               name='primaryPhysician'
-              label='Doctor'
-              placeholder="Select a doctor"
+              label='Artista'
+              placeholder="Selectciona un artista"
             >
               {Doctors.map((doctor) => (
                 <SelectItem 
@@ -164,9 +164,9 @@ const AppointmentForm = ({
               fieldType={FormFieldType.DATE_PICKER}
               control={form.control}
               name='schedule'
-              label='Expected appointment date'
+              label='Fecha de turno solicitada'
               showTimeSelect
-              dateFormat="MM/dd/yyy - h:mm aa"
+              dateFormat="dd/MM/yyy - h:mm aa"
             />
 
             <div className="flex flex-col gap-6 xl:flex-row">
@@ -174,16 +174,16 @@ const AppointmentForm = ({
                 fieldType={FormFieldType.TEXTAREA}
                 control={form.control}
                 name='reason'
-                label='Reason for appointment'
-                placeholder='Enter a reason for appointment'
+                label='Diseño seleccionado'
+                placeholder='Ingresa una breve descripción del diseño elegido'
               />
 
               <CustomFormField
                 fieldType={FormFieldType.TEXTAREA}
                 control={form.control}
                 name='note'
-                label='Notes'
-                placeholder='Enter notes'
+                label='Detalles'
+                placeholder='Ingresa los detalles que consideres necesarios'
               />
             </div>
           </>
@@ -194,8 +194,8 @@ const AppointmentForm = ({
             fieldType={FormFieldType.TEXTAREA}
             control={form.control}
             name='cancellationReason'
-            label='Resaon for cancellation'
-            placeholder='Enter reason for cancellation'
+            label='Motivo de cancelación'
+            placeholder='Ingresa la razón por la que cancelas el turno'
           />
         )}
       

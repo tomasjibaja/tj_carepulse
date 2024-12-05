@@ -21,7 +21,7 @@ const StatusBadge = ({ status }: { status: Status }) => {
         'text-green-500': status === 'scheduled',
         'text-blue-500': status === 'pending',
         'text-red-500': status === 'cancelled',
-      })}>{status}</p>
+      })}>{status === 'scheduled' ? 'agendado' : status === 'cancelled' ? 'cancelado' : 'pendiente'}</p>
     </div>
   )
 }

@@ -27,7 +27,7 @@ const StatCard = ({ count = 0, label, icon, type }: StatCardProps ) => {
         <h1 className='text-32-bold text-white'>{count}</h1>
       </div>
 
-      <p className='text-14-regular'>{label}</p>
+      <p className='text-14-regular'>{type === 'appointments' ? 'turno' : type === 'pending' ? 'pendiente' : 'cancelado'}{count > 1 && 's'}</p>
     </div>
   )
 }

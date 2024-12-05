@@ -17,19 +17,19 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     accessorKey: 'patient',
-    header: 'Patient',
+    header: 'Cliente',
     cell: ({ row }) => <p>{row.original.patient.name}</p>
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: "Estado",
     cell: ({ row }) => <div className="min-w-[115px}">
       <StatusBadge status={row.original.status} />
     </div>
   },
   {
     accessorKey: "schedule",
-    header: "Appointment",
+    header: "Turno",
     cell: ({ row }) => (
       <p className="text-14-regular min-w-[100px]">
         {formatDateTime(row.original.schedule).dateTime}
@@ -38,7 +38,7 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     accessorKey: "primaryPhysician",
-    header: () => 'Doctor',
+    header: () => 'Artista',
     cell: ({ row }) => {
       const doctor = Doctors.find((doc) => doc.name === row.original.primaryPhysician)
 
@@ -60,7 +60,7 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     id: "actions",
-    header: () => <div className="pl-4">Actions</div>,
+    header: () => <div className="pl-4">Acciones</div>,
     cell: ({ row: { original: data } }) => {
       return (
         <div className="flex gap-1">

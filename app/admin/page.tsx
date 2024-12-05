@@ -13,23 +13,24 @@ const Admin = async () => {
   return (
     <div className='mx-auto flex max-w-7xl flex-col space-y-14'>
       <header className='admin-header'>
-        <Link href='/' className='cursor-pointer'>
+        <Link href='/' className='cursor-pointer flex flex-row items-center'>
           <Image
-            src='/assets/icons/logo-full.svg'
+            src='/assets/icons/logo-small.png'
             height={32}
             width={162}
             alt='Logo'
             className='h-8 w-fit'
           />
+          <span className='font-bold text-lg px-2'>INK-TADÉ</span>
         </Link>
 
-        <p className='text-16-semibold'>Admin Dashboard</p>
+        <p className='text-16-semibold'>Panel de administrador</p>
       </header>
 
       <main className='admin-main'>
         <section className='w-full space-y-4'>
-          <h1 className='header'>Welcome 👋</h1>
-          <p className='text-dark-700'>Start the day with managing new appointments</p>
+          <h1 className='header'>Turnos</h1>
+          <p className='text-dark-700'>Estos son los turnos del día</p>
         </section>
 
         <section className='admin-stat'>
