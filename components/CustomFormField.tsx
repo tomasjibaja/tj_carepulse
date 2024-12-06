@@ -95,7 +95,7 @@ const RenderField = ({ field, props } : { field: any; props: CustomProps }) => {
             <DatePicker
               selected={field.value}
               onChange={(date) => field.onChange(date)}
-              dateFormat={dateFormat ?? 'MM/dd/yyy'}
+              dateFormat={dateFormat ?? 'dd/MM/yyy'}
               showTimeSelect={showTimeSelect ?? false}
               timeInputLabel="Time: "
               wrapperClassName="date-picker"

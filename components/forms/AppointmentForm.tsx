@@ -116,7 +116,7 @@ const AppointmentForm = ({
       buttonLabel = 'Cancelar turno'
       break;
     case 'create':
-      buttonLabel = 'Crear turno'
+      buttonLabel = 'Solicitar turno'
       break;
     case 'schedule':
       buttonLabel = 'Agendar turno'
@@ -130,7 +130,7 @@ const AppointmentForm = ({
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1">
         {type === 'create' && <section className="mb-12 space-y-4">
           <h1 className="header">Nuevo turno</h1>
-          <p className="text-dark-700">Solicita un turno en diez segundos</p>
+          <p className="text-dark-700">Solicita tu turno aquí</p>
         </section>}
 
         {type !== 'cancel' && (
@@ -140,7 +140,7 @@ const AppointmentForm = ({
               control={form.control}
               name='primaryPhysician'
               label='Artista'
-              placeholder="Selectciona un artista"
+              placeholder="Selecciona un artista"
             >
               {Doctors.map((doctor) => (
                 <SelectItem 

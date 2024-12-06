@@ -12,23 +12,23 @@ const Register = async ({ params }: SearchParamProps) => {
       <section className="container remove-scrollbar">
         <div className="sub-container max-w-[860px] flex-1 flex-col py-10">
           <Image 
-            src="/assets/icons/logo-full.svg"
+            src="/assets/icons/logo-ink.png"
             height={1000}
             width={1000}
             alt="patient"
-            className="mb-12 h-10 w-fit"
+            className="mb-10 h-20 w-fit"
           />
 
           <RegisterForm user={user} />
 
           <p className="copyright py-12"> 
-              &copy; 2024 CarePulse
+              &copy; 2024 Ink-Tadé
           </p>
         </div>
       </section>
 
       <Image
-        src="/assets/images/register-img.png"
+        src="/assets/images/tattoo-artist-color.jpg"
         height={1000}
         width={1000}
         alt="patient"

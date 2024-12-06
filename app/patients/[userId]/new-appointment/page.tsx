@@ -13,11 +13,11 @@ export default async function NewAppointment({ params }: SearchParamProps) {
       <section className="remove-scrollbar container my-auto">
         <div className="sub-container max-w-[860px] flex-1 justify-between">
           <Image 
-            src="/assets/icons/logo-full.svg"
+            src="/assets/icons/logo-ink.png"
             height={1000}
             width={1000}
             alt="patient"
-            className="mb-12 h-10 w-fit"
+            className="mb-12 h-20 w-fit"
           />
 
           <AppointmentForm 
@@ -27,14 +27,14 @@ export default async function NewAppointment({ params }: SearchParamProps) {
           />
 
           <p className="copyright mt-10 py-12"> 
-            &copy; 2024 CarePulse
+            &copy; 2024 Ink-Tadé
           </p>
 
         </div>
       </section>
 
       <Image
-        src="/assets/images/appointment-img.png"
+        src="/assets/images/appointment-img.jpg"
         height={1000}
         width={1000}
         alt="appointment"

@@ -19,29 +19,29 @@ export default async function SuccessPage ( { params, searchParams }: SearchPara
       <div className='success-img'>
         <Link href='/'>
           <Image
-            src='/assets/icons/logo-full.svg'
+            src='/assets/icons/logo-gold.png'
             height={1000}
             width={1000}
             alt='logo'
-            className='h-10 w-fit'
+            className='h-40 w-fit'
           />
         </Link>
 
         <section className='flex flex-col items-center'>
-          <Image 
+          {/* <Image 
             src='/assets/gifs/success.gif'
             height={300}
             width={280}
             alt='success'
-          />
+          /> */}
           <h2 className='header mb-6 max-w-[600px] text-center'>
-            Your <span className='text-green-500'>appointment request</span> has been successfully submitted!
+            Tu <span className='text-beige-500'>solicitud</span> ha sido enviada exitosamente!
           </h2>
-          <p>We will be in touch shortly to confirm</p>
+          <p>Nos comunicaremosen breve para confirmar</p>
         </section>
 
         <section className='request-details'>
-          <p>Requested appointment details:</p>
+          <p>Detalles del turno solicitado:</p>
           <div className='flex items-center gap-3'>
             <Image
               src={doctor?.image!}
@@ -68,10 +68,10 @@ export default async function SuccessPage ( { params, searchParams }: SearchPara
           className='shad-primary-btn rounded'
         >
           <Link href={`/patients/${userId}/new-appointment`}>
-            New Appointment
+            Nuevo turno
           </Link>
         </Button>
-        <p className='copyright'>&copy; 2024 Carepulse</p>
+        <p className='copyright'>&copy; 2024 Ink-Tadé</p>
       </div>
     </div>
   )

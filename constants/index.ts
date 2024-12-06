@@ -1,4 +1,4 @@
-export const GenderOptions = ["Male", "Female", "Other"];
+export const GenderOptions = ["Hombre", "Mujer", "Otro"];
 
 export const PatientFormDefaultValues = {
   firstName: "",
@@ -6,7 +6,7 @@ export const PatientFormDefaultValues = {
   email: "",
   phone: "",
   birthDate: new Date(Date.now()),
-  gender: "male" as Gender,
+  gender: "hombre" as Gender,
   address: "",
   occupation: "",
   emergencyContactName: "",
@@ -27,17 +27,11 @@ export const PatientFormDefaultValues = {
 };
 
 export const IdentificationTypes = [
-  "Birth Certificate",
-  "Driver's License",
-  "Medical Insurance Card/Policy",
-  "Military ID Card",
-  "National Identity Card",
-  "Passport",
-  "Resident Alien Card (Green Card)",
-  "Social Security Card",
-  "State ID Card",
-  "Student ID Card",
-  "Voter ID Card",
+  "Partida de nacimiento",
+  "Licencia de conducir",
+  "Carnet de obra social",
+  "Documento nacional de identidad",
+  "Pasaporte",
 ];
 
 export const Doctors = [
@@ -70,7 +64,7 @@ export const Doctors = [
     name: "Zina Samoletova",
   },
   {
-    image: "/assets/images/ryan-ashley-malarkey.png",
+    image: "/assets/images/ryan-ashley.png",
     name: "Ryan Ashley Malarkey",
   },
   {

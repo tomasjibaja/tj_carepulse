@@ -86,8 +86,6 @@ const  RegisterForm = ({ user }: { user: User }) => {
           : undefined,
       };
 
-      console.log(patient)
-
       const newPatient = await registerPatient(patient);
 
       if (newPatient) {
@@ -102,13 +100,13 @@ const  RegisterForm = ({ user }: { user: User }) => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12 flex-1">
         <section className="space-y-4">
-          <h1 className="header">Welcome 👋</h1>
-          <p className="text-dark-700">Let us know more about yourself.</p>
+          <h1 className="header">Te damos la bienvenida 👋</h1>
+          <p className="text-dark-700">Nos gustaría saber más de vos.</p>
         </section>
 
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
-            <h2 className="sub-header">Personal information</h2>
+            <h2 className="sub-header">Información personal</h2>
           </div>
         </section>
 
@@ -116,8 +114,8 @@ const  RegisterForm = ({ user }: { user: User }) => {
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name='name'
-          label="Full Name"
-          placeholder='John Doe'
+          label="Nombre completo"
+          placeholder='Tu nombre'
           iconSrc='/assets/icons/user.svg'
           iconAlt='user'
         />
@@ -128,7 +126,7 @@ const  RegisterForm = ({ user }: { user: User }) => {
             control={form.control}
             name='email'
             label='Email'
-            placeholder='johndoe@jsmastery.pro'
+            placeholder='tuemail@tattoo.pro'
             iconSrc='/assets/icons/email.svg'
             iconAlt='email'
           />
@@ -137,8 +135,8 @@ const  RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.PHONE_INPUT}
             control={form.control}
             name='phone'
-            label='Phone number'
-            placeholder='(555) 123-4567'
+            label='Teléfono'
+            placeholder='(11) 3434-3434'
           />
         </div>
 
@@ -147,14 +145,14 @@ const  RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.DATE_PICKER}
             control={form.control}
             name='birthDate'
-            label='Date Of Birth'
+            label='Fecha de nacimiento'
           />
 
           <CustomFormField
             fieldType={FormFieldType.SKELETON}
             control={form.control}
             name='gender'
-            label='Gender'
+            label='Género'
             renderSkeleton={(field) => (
               <FormControl>
                 <RadioGroup className="flex h-11 gap-6 xl:justify-between"
@@ -186,16 +184,16 @@ const  RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.INPUT}
             control={form.control}
             name='address'
-            label='Address'
-            placeholder='14th Street, Washintong'
+            label='Domicilio'
+            placeholder='Av. Belgrano 123, CABA'
           />
 
           <CustomFormField
             fieldType={FormFieldType.INPUT}
             control={form.control}
             name='occupation'
-            label='Occupation'
-            placeholder='WebDev'
+            label='Ocupación'
+            placeholder='Comercio'
           />
         </div>
 
@@ -204,23 +202,23 @@ const  RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.INPUT}
             control={form.control}
             name='emergencyContactName'
-            label='Emergency Contact Name'
-            placeholder="Guardian's Name"
+            label='Contacto alternativo (nombre)'
+            placeholder="Persona de tu confianza"
           />
 
           <CustomFormField
             fieldType={FormFieldType.PHONE_INPUT}
             control={form.control}
             name='emergencyContactNumber'
-            label='Emergency contact number'
-            placeholder='(555) 123-4567'
+            label='Contacto alternativo (teléfono)'
+            placeholder='(11) 3636-3636'
           />
         </div>
 
 
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
-            <h2 className="sub-header">Medical information</h2>
+            <h2 className="sub-header">Información adicional</h2>
           </div>
         </section>
 
@@ -228,8 +226,8 @@ const  RegisterForm = ({ user }: { user: User }) => {
           fieldType={FormFieldType.SELECT}
           control={form.control}
           name='primaryPhysician'
-          label='Primary Physician'
-          placeholder="Select a physician"
+          label='Artista de preferencia'
+          placeholder="Selecciona un artista"
         >
           {Doctors.map((doctor) => (
             <SelectItem 
@@ -256,15 +254,15 @@ const  RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.INPUT}
             control={form.control}
             name='insuranceProvider'
-            label='Insurance Provider'
-            placeholder='BlueCross BlueShield'
+            label='Obra social'
+            placeholder='OSKINT'
           />
 
           <CustomFormField
             fieldType={FormFieldType.INPUT}
             control={form.control}
             name='insurancePolicyNumber'
-            label='Insurance policy number'
+            label='Número de afiliado'
             placeholder='ABC123456789'
           />
         </div>
@@ -274,16 +272,16 @@ const  RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.TEXTAREA}
             control={form.control}
             name='allergies'
-            label='Allergies (if any)'
-            placeholder='Peanuts, penicillin, pollen, etc.'
+            label='Alergias'
+            placeholder='Polen, polvo, etc.'
           />
 
           <CustomFormField
             fieldType={FormFieldType.TEXTAREA}
             control={form.control}
             name='currentMedication'
-            label='Current medication (if any)'
-            placeholder='Ibuprofen 200mg, Paracetamol 500mg'
+            label='Medicación'
+            placeholder='Allplax, Clonazepam'
           />
         </div>
 
@@ -292,22 +290,22 @@ const  RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.TEXTAREA}
             control={form.control}
             name='familyMedicalHistory'
-            label='Family medical history'
-            placeholder='Known diseases in family members'
+            label='Historia clínica familiar'
+            placeholder='Dolencias que conozcas en algún integrante de la familia'
           />
 
           <CustomFormField
             fieldType={FormFieldType.TEXTAREA}
             control={form.control}
             name='pastMedicalHistory'
-            label='Past medical history'
-            placeholder='Appendectomy...'
+            label='Historia clínica propia'
+            placeholder='Apéndice...'
           />
         </div>
 
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
-            <h2 className="sub-header">Identification and Verification</h2>
+            <h2 className="sub-header">Identificación y verificación</h2>
           </div>
         </section>
 
@@ -315,8 +313,8 @@ const  RegisterForm = ({ user }: { user: User }) => {
           fieldType={FormFieldType.SELECT}
           control={form.control}
           name='identificationType'
-          label='Identification Type'
-          placeholder="Select an identification type"
+          label='Tipo de identificación'
+          placeholder="Selecciona un tipo de identificación"
         >
           {IdentificationTypes.map((type) => (
             <SelectItem 
@@ -332,7 +330,7 @@ const  RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.INPUT}
             control={form.control}
             name='identificationNumber'
-            label='Identification Number'
+            label='Número de identificación'
             placeholder='123456789'
           />
         
@@ -340,7 +338,7 @@ const  RegisterForm = ({ user }: { user: User }) => {
             fieldType={FormFieldType.SKELETON}
             control={form.control}
             name='identificationDocument'
-            label='Scanned copy of ID'
+            label='Foto de documento'
             renderSkeleton={(field) => (
               <FormControl>
                 <FileUploader 
@@ -353,7 +351,7 @@ const  RegisterForm = ({ user }: { user: User }) => {
 
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
-            <h2 className="sub-header">Consent and Privacy</h2>
+            <h2 className="sub-header">Consentimiento y privacidad</h2>
           </div>
         </section>
 
@@ -361,14 +359,14 @@ const  RegisterForm = ({ user }: { user: User }) => {
           fieldType={FormFieldType.CHECKBOX}
           control={form.control}
           name="treatmentConsent"
-          label="I consent to treatment"
+          label="Acepto tatuarme en Ink-Tadé Tattoo Studio"
         />
 
         <CustomFormField
           fieldType={FormFieldType.CHECKBOX}
           control={form.control}
           name="disclosureConsent"
-          label="I consent to disclosure of information"
+          label="Acepto que la imagen mi tatuaje pueda ser usada para fines demostrativos"
         />
 
 
@@ -376,10 +374,10 @@ const  RegisterForm = ({ user }: { user: User }) => {
           fieldType={FormFieldType.CHECKBOX}
           control={form.control}
           name="privacyConsent"
-          label="I consent to privacy policy"
+          label="Acepto la política de privacidad"
         />
 
-        <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
+        <SubmitButton isLoading={isLoading}>Enviar datos</SubmitButton>
 
       </form>
     </Form> 

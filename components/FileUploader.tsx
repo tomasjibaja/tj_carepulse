@@ -40,18 +40,18 @@ const FileUploader = ({ files, onChange }: FileUploaderProps) => {
           />
           <div className='file-upload-label'>
             <p className='text-14-regular'>
-              <span className='text-green-500'>Click to upload</span> or drag and drop
+              <span className='text-green-500'>Haz click</span> o arrastra y suelta
             </p>
             <p>
-              SVG, PNG, JPG or GIF (max 800 x 400)
+              SVG, PNG, JPG o GIF (máx. 800 x 400)
             </p>
           </div>
         </>
       )}
       {
         isDragActive ?
-          <p>Drop the files here ...</p> :
-          <p>Drag 'n' drop some files here, or click to select files</p>
+          <p>Suelta los archivos aquí ...</p> :
+          <p>Arrastra y suelta los archivos aquí o haz click para seleccionarlos</p>
       }
     </div>
   )

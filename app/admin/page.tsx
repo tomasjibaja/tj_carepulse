@@ -24,7 +24,7 @@ const Admin = async () => {
           <span className='font-bold text-lg px-2'>INK-TADÉ</span>
         </Link>
 
-        <p className='text-16-semibold'>Panel de administrador</p>
+        <p className='text-16-semibold'>Panel de admin</p>
       </header>
 
       <main className='admin-main'>
